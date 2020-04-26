@@ -38,7 +38,7 @@
 			<li><a href="{{ route('pitches.create') }}">Pitch Court</a></li>
 			
 		</ul>
-		@include('layouts.navAuth')
+		
 	</nav>	
 	<div id="page-content-wrapper"> 
             <div class="container-fluid"> 
