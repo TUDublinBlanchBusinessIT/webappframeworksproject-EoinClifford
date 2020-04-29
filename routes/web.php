@@ -33,3 +33,5 @@ Route::get('/customers/new', 'CustomerController@new');
 Route::post('/customers/create', 'CustomerController@create')->name('customers.create');
 Route::get('/customers/edit/{id}', 'CustomerController@edit');
 Route::post('/customers/update', 'CustomerController@update');
+
+Route::get('products/displaygrid', 'productController@displaygrid')->name('products.displaygrid');
