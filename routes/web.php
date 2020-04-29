@@ -14,8 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('scorders/checkout', 'scorderController@checkout')->name('scorders.checkout');
 Route::get('/home','memberController@index')->name('home');
+//logout
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
 
@@ -37,3 +38,4 @@ Route::post('/customers/update', 'CustomerController@update');
 Route::get('products/displaygrid', 'productController@displaygrid')->name('products.displaygrid');
 Route::get('products/additem/{id}', 'productController@additem')->name('products.additem');
 Route::get('products/emptycart', 'productController@emptycart')->name('products.emptycart');
+Route::post('scorders/placeorder', 'scorderController@placeorder')->name('scorders.placeorder');
