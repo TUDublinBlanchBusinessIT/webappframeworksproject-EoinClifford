@@ -35,3 +35,4 @@ Route::get('/customers/edit/{id}', 'CustomerController@edit');
 Route::post('/customers/update', 'CustomerController@update');
 
 Route::get('products/displaygrid', 'productController@displaygrid')->name('products.displaygrid');
+Route::get('products/additem/{id}', 'productController@additem')->name('products.additem');
