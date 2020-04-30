@@ -9,6 +9,8 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\Member as Member;
+use App\Models\Pitch as Pitch;
 
 class bookingController extends AppBaseController
 {
@@ -41,9 +43,14 @@ class bookingController extends AppBaseController
      * @return Response
      */
     public function create()
-    {
-        return view('bookings.create');
-    }
+ {
+     //Find all members from the DB and return as an array of Member.php objects
+     $members = Member::all();
+     //Find all courts from the DB and return as an array of Court.php objects
+     $pitches = Pitch::all();
+     //return the bookings.create view with $members and $courts as view variables
+     return view('bookings.create')->with('members',$members)->with('pitches',$pitches);
+}
 
     /**
      * Store a newly created booking in storage.

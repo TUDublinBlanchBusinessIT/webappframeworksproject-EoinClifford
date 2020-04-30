@@ -28,15 +28,23 @@
 <!-- Memberid Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('memberid', 'Memberid:') !!}
-    {!! Form::number('memberid', null, ['class' => 'form-control']) !!}
+    <select name="memberid" class="form-control">
+		@foreach ($members as $members)
+			<option value="{{$members->id}}">{{$members->firstname}} {{$members->surname}}</option>
+		@endforeach
+	</SELECT>
 </div>
 
 <!-- Pitchid Field -->
 <div class="form-group col-sm-6">
+   <div class="form-group col-sm-6">
     {!! Form::label('pitchid', 'Pitchid:') !!}
-    {!! Form::number('pitchid', null, ['class' => 'form-control']) !!}
+    	<select name="pitchid" class="form-control">
+		@foreach ($pitches as $pitch)
+		<option value="{{$pitch->id}}">{{$pitch->id}}</option>
+		@endforeach
+	</select>
 </div>
-
 <!-- Fee Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('fee', 'Fee:') !!}

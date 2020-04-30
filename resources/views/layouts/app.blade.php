@@ -26,10 +26,7 @@
 
     @yield('css')
 </head>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+
 
 <body>
 <div class="p-3 mb-2 bg-danger text-white">
@@ -42,8 +39,7 @@
 			<li><a href="{{ route('members.create') }}">New Member</a></li>
 			<li><a href="{{ route('bookings.index') }}">Booking List</a></li>
 			<li><a href="{{ route('bookings.create') }}">New Booking</a></li>
-			<li><a href="{{ route('pitches.index') }}">Pitch List</a></li>
-			<li><a href="{{ route('pitches.create') }}">Pitch Court</a></li>
+			<li><a href="{{ route('products.displaygrid') }}">Club Shop</a></li>
 			
 		</ul>
 		@include('layouts.navAuth')
