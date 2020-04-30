@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//checkout
 Route::get('scorders/checkout', 'scorderController@checkout')->name('scorders.checkout');
 Route::get('/home','memberController@index')->name('home');
 //logout
@@ -39,3 +40,6 @@ Route::get('products/displaygrid', 'productController@displaygrid')->name('produ
 Route::get('products/additem/{id}', 'productController@additem')->name('products.additem');
 Route::get('products/emptycart', 'productController@emptycart')->name('products.emptycart');
 Route::post('scorders/placeorder', 'scorderController@placeorder')->name('scorders.placeorder');
+//calendar
+Route::get('/calendar/display','CalendarController@display')->name('calendar.display');
+Route::get('/calendar/json','CalendarController@json')->name('calendar.json');
