@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
-
         <ul class="list-inline nav navbar-nav navbar-right">
             <li><button id="checkOut" onclick="window.location.href='{{route('scorders.checkout')}} '" type="button" class="btn btn-primary navbar-btn center-block">Check Out</button></a></li> 
             <li><button id="emptycart" type="button" class="btn btn-primary navbar-btn center-block">Empty Cart</button></li> 
