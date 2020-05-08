@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `booking` (
   KEY `pitchid` (`pitchid`),
   CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`memberid`) REFERENCES `member` (`id`),
   CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`pitchid`) REFERENCES `pitch` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `member` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `FK_member_user_unique` (`userid`),
   CONSTRAINT `FK_member_user` FOREIGN KEY (`userid`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `orderdetail` (
   KEY `orderid` (`orderid`),
   CONSTRAINT `orderdetail_ibfk_1` FOREIGN KEY (`productid`) REFERENCES `product` (`id`),
   CONSTRAINT `orderdetail_ibfk_2` FOREIGN KEY (`orderid`) REFERENCES `scorder` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `scorder` (
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
